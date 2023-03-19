@@ -5,13 +5,24 @@
  First you need to install [opencv](https://opencv.org/) for python: [PyPi Page](https://pypi.org/project/opencv-python/).
  NumPy and PyYAML should be installed automaticly with python 3.11, if you don't have them they are required, Versions of
  what I am using are at the bottom, 
- 
+ <pre>
  I am using:
  Python version: 3.11.2 (64-bit)
  Module versions:
    numpy              1.24.2
    opencv-python      4.7.0.72
    PyYAML             6.0
+ </pre>
+ #### Module List:
+ <pre>
+   cv2
+   os
+   subprocess
+   numpy
+   time
+   yaml
+   requests
+ </pre>
 
 ## Usage
   Used to convert a monochrome video to binary.

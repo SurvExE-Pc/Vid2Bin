@@ -1,5 +1,5 @@
 #  ALL CODE BELONGS TO SURVEXE-PC
-#  Written 2023, March 19 | Licensed under MIT on 2023, March 19 | And released 2023, March 19 | Current Version: v3.03192023
+#  Written 2023, March 19 | Licensed under MIT on 2023, March 19 | And released 2023, March 19 | Current Version: v3.3.03192023
 #  https://github.com/SurvExE-Pc/
 
 
@@ -45,6 +45,7 @@ import subprocess
 import numpy as np
 import time
 import yaml
+from requests import get
 
 prgrm_t = time.time()
 
@@ -80,6 +81,14 @@ if os.path.exists(f"{VID_NAME}.mp4"):
     os.remove(f"{VID_NAME}.mp4")
 if os.path.exists(f"{BIN_NAME}.bin"):
     os.remove(f"{BIN_NAME}.bin")
+if not os.path.exists("ffmpeg.exe"):
+    print("Missing FFmpeg!\nDownloading it now.")
+    url = 'https://archive.org/download/ffmpeg_202303/ffmpeg.exe'
+    response = get(url)
+    with open('ffmpeg.exe', 'wb') as file:
+        file.write(response.content)
+    print("Downloaded!")
+
 
 #Resize and convert video.
 if convertVideo:
