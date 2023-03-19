@@ -1,0 +1,4 @@
+ffmpeg.exe
+frames.bin
+data/*
+out_video.mp4

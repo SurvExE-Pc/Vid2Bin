@@ -1,0 +1,14 @@
+#Options
+video:
+   width: !!int 16
+   height: !!int 16
+   input_name: !!str in_video
+   output_name: !!str out_video
+binary:
+   output_name: !!str frames
+#DANGER OPTIONS BELOW
+danger:
+   convertVideo: !!bool true
+   splitVideo: !!bool true
+   writeOut: !!bool true
+   convertToBinary: !!bool true
